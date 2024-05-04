@@ -1,0 +1,30 @@
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed; /* Set navbar to fixed position */
+    top: 0; /* Align navbar to the top */
+    width: 100%; /* Set width to full */
+    z-index: 1000; /* Ensure the navbar stays above other elements */
+    transition: all 0.3s ease; /* Smooth transition for sticky effect */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFA500;
+}

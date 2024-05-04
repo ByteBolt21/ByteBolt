@@ -1,15 +1,37 @@
 // Navigation.js
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-import React from 'react';
+const Navbar = ({ scrollToSection }) => {
+    const [isSticky, setIsSticky] = useState(false);
 
-const Navbar = () => {
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+
     return (
-        <nav>
+        <nav className={isSticky ? 'sticky' : ''}>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><Link to="/" onClick={() => scrollToSection('home')}>Home</Link></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#" onClick={() => scrollToSection('about')}>About</a></li>
+                <li><a href="#" onClick={() => scrollToSection('contact')}>Contact Us</a></li>
             </ul>
         </nav>
     );
