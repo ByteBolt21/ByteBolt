@@ -16,8 +16,13 @@
   align-items: center;
 
   height: 400px;
-  
 
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: black;
+  color: #F0F0F0
 }
 
 .card-icon {
@@ -43,11 +48,11 @@
   .card h3 {
     font-size: 20px;
   }
-  
+
   .card-body {
     padding: 15px;
   }
-  
+
   .card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -57,12 +62,20 @@
   .card h3 {
     font-size: 18px;
   }
-  
+
   .card-icon {
     padding: 15px 0;
   }
-  
+
   .card-body {
     padding: 10px;
+  }
+
+  .hovered-text {
+    display: none;
+  }
+
+  .card:hover .hovered-text {
+    display: block;
   }
 }

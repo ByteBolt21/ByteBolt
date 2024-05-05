@@ -1,15 +1,15 @@
-*{
-scroll-behavior: smooth;
+* {
+    scroll-behavior: smooth;
 }
 
-main{
+main {
     /* max-width: 1200px; */
     height: auto;
     width: 100%;
 }
 
 
-#sectionOne{
+#sectionOne {
     width: 100%;
     height: 50vh;
     margin-top: 50px;
@@ -19,36 +19,38 @@ main{
     align-items: center;
     /* flex-direction: row; */
     padding: 0 100px;
-    
+
     max-width: 1200px;
     max-height: 900px;
     margin: 0 auto;
-    
+
     position: relative;
 }
-.sectionOneText{
-width: 60%;
-font-size: 43px;
-position: absolute;
-top: 30%;
-left: 10%;
-/* 
+
+.sectionOneText {
+    width: 60%;
+    font-size: 43px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    /* 
 display: flex;
 justify-content: start;
 align-items: start; */
 
 }
-.sectionOneSvg{
+
+.sectionOneSvg {
     width: 40%;
     height: 100%;
-    padding: 100px 0 0 350px ;
+    padding: 100px 0 0 350px;
     display: flex;
     justify-content: center;
     align-items: end;
 }
 
-       
-.sectionOneSvg svg{
+
+.sectionOneSvg svg {
     height: 100%;
     width: 100%;
     margin-top: 150px;
@@ -56,72 +58,75 @@ align-items: start; */
 
 
 }
-     
+
 
 /* For tablets */
 @media (max-width: 900px) {
-   
-    #sectionOne{
+
+    #sectionOne {
         width: auto;
         max-width: 1200px;
-}    
+    }
 
-}    
+}
 
 /* For tablets */
 @media (max-width: 768px) {
-   
-#sectionOne{
-    width: auto;
-    padding: 0 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-.sectionOneText{
-width: 60%;
-font-size: 24px;
-position: absolute;
-top: 30%;
-left: 10%;
-/* 
+
+    #sectionOne {
+        width: auto;
+        padding: 0 100px;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .sectionOneText {
+        width: 60%;
+        font-size: 24px;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        /* 
 display: flex;
 justify-content: start;
 align-items: start; */
 
-}
-.sectionOneSvg{
-    width: 40%;
-    height: 100%;
-    padding: 0 0 0 250px ;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-        
-.sectionOneSvg svg{
-    height: 600px;
-    width: 300px;
-}
-        
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
-   
-    .sectionOneText{
-    font-size: 20px;
     }
-    .sectionOneSvg{
-        height: 600px;
-        width: 600px;
-        margin: 0 0 0  -200px;
+
+    .sectionOneSvg {
+        width: 40%;
+        height: 100%;
+        padding: 0 0 0 250px;
         display: flex;
         justify-content: center;
         align-items: end;
     }
-            
-    .sectionOneSvg svg{
+
+    .sectionOneSvg svg {
+        height: 600px;
+        width: 300px;
+    }
+
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+
+    .sectionOneText {
+        font-size: 20px;
+    }
+
+    .sectionOneSvg {
+        height: 600px;
+        width: 600px;
+        margin: 0 0 0 -200px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .sectionOneSvg svg {
         height: 600px;
         width: 200px;
     }
@@ -131,25 +136,25 @@ align-items: start; */
 
 /* +============================= SECTION TWO */
 
-#AaboutUsSection{
+#AaboutUsSection {
     height: 100px;
-    
+
 }
 
-#sectionTwo{
-    width: 1100px ;
+#sectionTwo {
+    width: 1100px;
     max-width: 1200px;
     /* margin: 0 auto ; */
     height: 30vh;
     max-height: 700px;
-    padding: 100px 200px ;
+    padding: 100px 200px;
     position: relative;
 
 }
 
 
 
-.blackCard{
+.blackCard {
     width: 400px;
     height: 200px;
     display: flex;
@@ -169,28 +174,31 @@ align-items: start; */
 
 
 @media (max-width: 900px) {
-   
 
-    #sectionTwo{
-        
+
+    #sectionTwo {
+
         padding: 100px 0 0 100px;
-    
+
     }
-    .blackCard{
+
+    .blackCard {
         width: 300px;
         height: 200px;
 
     }
-    
-    
-}
-@media (max-width: 760px) {
-    #sectionTwo{
-        padding: 0 50px;   
 
-    
+
+}
+
+@media (max-width: 760px) {
+    #sectionTwo {
+        padding: 0 50px;
+
+
     }
-    .blackCard{
+
+    .blackCard {
         width: 250px;
         height: 200px;
         font-size: 23px;
@@ -198,15 +206,17 @@ align-items: start; */
 
 
 }
+
 @media (max-width: 480px) {
-    #sectionTwo{
+    #sectionTwo {
         padding: 0 30px;
-        
-    
-    
+
+
+
 
     }
-    .blackCard{
+
+    .blackCard {
         width: 200px;
         height: 200px;
         font-size: 23px;
@@ -222,25 +232,25 @@ align-items: start; */
 
 
 /* ================================ */
-#sectioThree{
+#sectioThree {
 
-        /* width: 100%; */
-        max-width: 1200px;
-        margin: 0 auto;
-        height: 100vh;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    /* width: 100%; */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
 
-        flex-direction: column;
-        padding: 50px  200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    
-    
+    flex-direction: column;
+    padding: 50px 200px;
+
+
+
 }
 
-.AboutCard{
+.AboutCard {
     width: 100%;
     display: flex;
     justify-content: start;
@@ -248,21 +258,22 @@ align-items: start; */
 
 }
 
-.AboutCardContent{
+.AboutCardContent {
     width: 50%;
 }
 
-.Empty{
+.Empty {
     width: 50%;
 
 }
 
 
-.AboutCardContent h2{
+.AboutCardContent h2 {
     font-size: 34px;
     text-decoration: underline;
 }
-.AboutCardContent p{
+
+.AboutCardContent p {
     font-size: 24px;
 }
 
@@ -272,25 +283,25 @@ align-items: start; */
 /* /==================== SECTION 4 */
 
 
-#ServicesSection{
+#ServicesSection {
     height: 100px;
-    
+
 }
 
-#sectionFour{
-    width: 1100px ;
+#sectionFour {
+    width: 1100px;
     max-width: 1200px;
     /* margin: 0 auto ; */
     height: 30vh;
     max-height: 700px;
-    padding: 100px 200px ;
+    padding: 100px 200px;
     position: relative;
 
 }
 
 
 
-.blackCard{
+.blackCard {
     width: 400px;
     height: 200px;
     display: flex;
@@ -303,8 +314,8 @@ align-items: start; */
 }
 
 
-.sectionFive{
-    padding:  0 200px;
+.sectionFive {
+    padding: 0 200px;
     max-width: 1200px;
     height: 100vh;
     display: flex;
@@ -315,19 +326,20 @@ align-items: start; */
 
 
 }
-.sectionFiveHeading{
+
+.sectionFiveHeading {
     font-size: 43px;
     font-weight: bolder;
 }
 
 
-#sectionSix{
+#sectionSix {
 
-    padding: 0 200px ;
+    padding: 0 200px;
     max-width: 1200px;
-    background-color: black ;    
+    background-color: black;
     height: 100vh;
-
+    padding-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,23 +347,25 @@ align-items: start; */
     flex-direction: column;
 
 }
-.sectionSixContent{
+
+.sectionSixContent {
     width: 60%;
     color: white;
     font-size: 23px;
 }
 
 
-#sectionSeven{
-    padding:100px 200px 0 200px;
+#sectionSeven {
+    padding: 100px 200px 0 200px;
     height: 40vh;
     width: 1200px;
 }
-#sectionEight{
+
+#sectionEight {
     padding: 0 200px;
     height: 100vh;
     width: 1200px;
-    display: flex;    
+    display: flex;
     justify-content: center;
     align-items: start;
     text-align: start;
@@ -359,30 +373,34 @@ align-items: start; */
     gap: 40px;
 }
 
-.FormContent{
+.FormContent {
     width: 60%;
-    display: flex;    
+    display: flex;
     justify-content: start;
     align-items: start;
     text-align: start;
     flex-direction: column;
     gap: 20px;
 }
-.FormContentHeading{
+
+.FormContentHeading {
     font-size: 60px;
 }
-.FormContentPara{
+
+.FormContentPara {
     font-size: 18px;
 }
-#form{
-    display: flex;    
+
+#form {
+    display: flex;
     justify-content: start;
     align-items: start;
     text-align: start;
     flex-direction: column;
     gap: 20px;
-    
+
 }
+
 /* #form input[type="text"] {
     width: 100%;
     height: 50px;
@@ -391,35 +409,38 @@ align-items: start; */
 
 
 } */
-#form input , #formTextArea{
+#form input,
+#formTextArea {
     width: 100%;
     height: 50px;
-    border: 2px solid black ;
+    border: 2px solid black;
     width: 900px;
     padding: 10px;
 
 
 }
-#formTextArea{
+
+#formTextArea {
     height: 200px;
-    
+
 }
-#formSubmitButton{
-    
-width: 100px;
-height: 30px;
-background-color: black;
-color: white ;
-border-radius: 15px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-margin-left: 10px;
+
+#formSubmitButton {
+
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
 }
 
 
-footer{
+footer {
 
     margin-top: 100px;
     width: 100%;
@@ -427,59 +448,65 @@ footer{
 
     padding: 100px 200px;
 
-    background-color: #F0F0F0 ;
+    background-color: #F0F0F0;
 
     display: flex;
-justify-content: start;
-align-items: start;
+    justify-content: start;
+    align-items: start;
 
-flex-direction: column;
-gap: 20px;
+    flex-direction: column;
+    gap: 20px;
 
 }
-.footerContent{
+
+.footerContent {
     display: flex;
     justify-content: start;
     align-items: start;
 
 }
-.footerContentLeft{
+
+.footerContentLeft {
     width: 50%;
     display: flex;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 
-flex-direction: column;
-gap: 20px;
+    flex-direction: column;
+    gap: 20px;
 }
+
 .footerContentRight {
     width: 50%;
 }
-.footerContentHeading{
+
+.footerContentHeading {
     font-size: 43px;
 }
 
 
-.footerLinks li{
+.footerLinks li {
     display: flex;
     justify-content: space-between;
     list-style: none;
     gap: 50px;
 
 }
-.footerLinks li{
+
+.footerLinks li {
     text-decoration: none;
 }
-    .footerLinks li a {
+
+.footerLinks li a {
     text-decoration: none;
 
 
 }
 
-.footerRightLinks{
+.footerRightLinks {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    gap: 50px; 
+    gap: 50px;
 
 }

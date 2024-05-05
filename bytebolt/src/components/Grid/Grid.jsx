@@ -1,131 +1,151 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Grid.css'; // Import your CSS file for additional styling if needed
 
-const Card = ({ icon, title, description }) => {
+const Card = ({ icon, title, description, paragragh }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+
+
   return (
-    <div className="card">
-      <div className="card-icon">
-        {icon} {/* Render the provided SVG element */}
-      </div>
-      <div className="card-body">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+
+    <div className="card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {isHovered ? (
+        <div className="hovered-text">
+          <p>{paragragh}</p>
+        </div>
+      ) : (
+        <>
+          <div className="card-icon">
+            {icon}  {/*  Render the provided SVG element */}
+            {/* {src} */}
+          </div>
+          <div className="card-body">
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+        </>
+      )}
     </div>
+
+
   );
 };
 
 const Grid = () => {
-  const cards = [
-   
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="80px"
-          height="80px"
-        >
-          <path d="M10 2h4v3h-4V2zm0 4h4v6h-4V6zm10 9h-1.5V10H16v5H8v-5H5.5v5H4v-5H2v7h20v-7h-2v5zm-5-5v5h1.5v-5H15zm-6 0v5h1.5v-5H9z" />
-        </svg>
-      ),
-      title: 'Card 1 Title',
-      description: 'Efficient development, seamless integration, and scalable solutions.',
-    },
-   
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="80px"
-          height="80px"
-        >
-          <path d="M10 2h4v3h-4V2zm0 4h4v6h-4V6zm10 9h-1.5V10H16v5H8v-5H5.5v5H4v-5H2v7h20v-7h-2v5zm-5-5v5h1.5v-5H15zm-6 0v5h1.5v-5H9z" />
-        </svg>
-      ),
-      title: 'Card 1 Title',
-      description: 'Efficient development, seamless integration, and scalable solutions.',
-    },
-   
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="80px"
-          height="80px"
-        >
-          <path d="M10 2h4v3h-4V2zm0 4h4v6h-4V6zm10 9h-1.5V10H16v5H8v-5H5.5v5H4v-5H2v7h20v-7h-2v5zm-5-5v5h1.5v-5H15zm-6 0v5h1.5v-5H9z" />
-        </svg>
-      ),
-      title: 'Card 1 Title',
-      description: 'Efficient development, seamless integration, and scalable solutions.',
-    },
-   
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="80px"
-          height="80px"
-        >
-          <path d="M10 2h4v3h-4V2zm0 4h4v6h-4V6zm10 9h-1.5V10H16v5H8v-5H5.5v5H4v-5H2v7h20v-7h-2v5zm-5-5v5h1.5v-5H15zm-6 0v5h1.5v-5H9z" />
-        </svg>
-      ),
-      title: 'Card 1 Title',
-      description: 'Efficient development, seamless integration, and scalable solutions.',
-    },
-   
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="80px"
-          height="80px"
-        >
-          <path d="M10 2h4v3h-4V2zm0 4h4v6h-4V6zm10 9h-1.5V10H16v5H8v-5H5.5v5H4v-5H2v7h20v-7h-2v5zm-5-5v5h1.5v-5H15zm-6 0v5h1.5v-5H9z" />
-        </svg>
-      ),
-      title: 'Card 1 Title',
-      description: 'Efficient development, seamless integration, and scalable solutions.',
-    },
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="80px"
-          height="80px"
-        >
-          <path d="M10 2h4v3h-4V2zm0 4h4v6h-4V6zm10 9h-1.5V10H16v5H8v-5H5.5v5H4v-5H2v7h20v-7h-2v5zm-5-5v5h1.5v-5H15zm-6 0v5h1.5v-5H9z" />
-        </svg>
-      ),
-      title: 'Card 1 Title',
-      description: 'Efficient development, seamless integration, and scalable solutions.',
-    },
- 
 
-   
+  const cards = [
+
+    {
+      icon: (
+
+        <img
+          src="/logo/mernStack.png"
+          alt="MERN STACK"
+          width="80px"
+          height="80px"
+        />
+      ),
+      title: 'MERN STACK',
+      description: 'Efficient development, seamless integration, and scalable solutions',
+      paragragh: 'Efficient development, seamless integration, and scalable solutions'
+    },
+
+    {
+      icon: (
+        <img
+          src="/logo/uiAndUx.png"
+          alt="UI And UX"
+          width="80px"
+          height="80px"
+        />
+
+      ),
+      title: 'UI And UX',
+      description: 'Intuitive design, seamless experiences, user-centric innovation',
+      paragragh: 'Intuitive design, seamless experiences, user-centric innovation'
+    },
+
+    {
+      icon: (
+        <img
+          src="/logo/Vector.png"
+          alt="EDITING"
+          width="80px"
+          height="80px"
+        />
+
+      ),
+      title: 'EDITING',
+      description: 'Pixel-perfect photo Editing and video editing mastery.',
+      paragragh: 'Pixel-perfect photo Editing and video editing mastery.'
+    },
+
+    {
+      icon: (
+        <img
+          src="/logo/shopify.png"
+          alt="SHOPIFY"
+          width="80px"
+          height="80px"
+        />
+
+      ),
+      title: 'SHOPIFY',
+      description: 'WE OFFER SHOPIFY STORE CREATION AND THEME CUSTOMIZATION.',
+      paragragh: 'WE OFFER SHOPIFY STORE CREATION AND THEME CUSTOMIZATION.'
+    },
+
+    {
+      icon: (
+        <img
+          src="/logo/graphicDesign.png"
+          alt="GRAPIC DESIGN"
+          width="80px"
+          height="80px"
+        />
+
+      ),
+      title: 'GRAPIC DESIGN',
+      description: 'Striking visuals, creative flair, impactful design.',
+      paragragh: 'Striking visuals, creative flair, impactful design.'
+    },
+    {
+      icon: (
+        <img
+          src="/logo/cms.png"
+          alt="CMS"
+          width="80px"
+          height="80px"
+        />
+
+      ),
+      title: 'CMS',
+      description: 'Innovative CMS with Web flow, Framer Motion, and more, enhancing digital journeys.',
+      paragragh: 'Innovative CMS with Web flow, Framer Motion, and more, enhancing digital journeys.'
+    },
+
+
+
     // Add more cards as needed
   ];
 
   return (
-    <div className="card-grid">
+    <div className="card-grid" >
       {cards.map((card, index) => (
         <Card
           key={index}
           icon={card.icon}
           title={card.title}
           description={card.description}
+          paragragh={card.paragragh}
         />
       ))}
     </div>
