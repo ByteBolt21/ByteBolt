@@ -251,13 +251,13 @@ const Home = () => {
           <div className="footerContentRight">
             <ul className="footerRightLinks">
               <li>
-                <a href="/">About</a>
+                <a href="#AaboutUsSectionId">About</a>
               </li>
               <li>
-                <a href="/">Services</a>
+                <a href="#ServicesSectionId">Services</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a href="#ContactUsSectionId">Contact</a>
               </li>
             </ul>
           </div>
