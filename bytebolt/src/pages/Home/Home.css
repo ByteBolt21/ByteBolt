@@ -1,0 +1,483 @@
+*{
+scroll-behavior: smooth;
+}
+
+main{
+    /* max-width: 1200px; */
+    height: auto;
+    width: 100%;
+}
+
+
+#sectionOne{
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+    padding: 0 100px;
+    
+    max-width: 1200px;
+    max-height: 900px;
+    margin: 0 auto;
+    
+    position: relative;
+}
+.sectionOneText{
+width: 60%;
+font-size: 43px;
+position: absolute;
+top: 30%;
+left: 10%;
+/* 
+display: flex;
+justify-content: start;
+align-items: start; */
+
+}
+.sectionOneSvg{
+    width: 40%;
+    height: 100%;
+    padding: 100px 0 0 350px ;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+       
+.sectionOneSvg svg{
+    height: 100%;
+    width: 100%;
+    margin-top: 150px;
+
+
+
+}
+     
+
+/* For tablets */
+@media (max-width: 900px) {
+   
+    #sectionOne{
+        width: auto;
+        max-width: 1200px;
+}    
+
+}    
+
+/* For tablets */
+@media (max-width: 768px) {
+   
+#sectionOne{
+    width: auto;
+    padding: 0 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.sectionOneText{
+width: 60%;
+font-size: 24px;
+position: absolute;
+top: 30%;
+left: 10%;
+/* 
+display: flex;
+justify-content: start;
+align-items: start; */
+
+}
+.sectionOneSvg{
+    width: 40%;
+    height: 100%;
+    padding: 0 0 0 250px ;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+        
+.sectionOneSvg svg{
+    height: 600px;
+    width: 300px;
+}
+        
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+   
+    .sectionOneText{
+    font-size: 20px;
+    }
+    .sectionOneSvg{
+        height: 600px;
+        width: 600px;
+        margin: 0 0 0  -200px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+            
+    .sectionOneSvg svg{
+        height: 600px;
+        width: 200px;
+    }
+
+}
+
+
+/* +============================= SECTION TWO */
+
+#AaboutUsSection{
+    height: 100px;
+    
+}
+
+#sectionTwo{
+    width: 1100px ;
+    max-width: 1200px;
+    /* margin: 0 auto ; */
+    height: 30vh;
+    max-height: 700px;
+    padding: 100px 200px ;
+    position: relative;
+
+}
+
+
+
+.blackCard{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 43px;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+   
+
+    #sectionTwo{
+        
+        padding: 100px 0 0 100px;
+    
+    }
+    .blackCard{
+        width: 300px;
+        height: 200px;
+
+    }
+    
+    
+}
+@media (max-width: 760px) {
+    #sectionTwo{
+        padding: 0 50px;   
+
+    
+    }
+    .blackCard{
+        width: 250px;
+        height: 200px;
+        font-size: 23px;
+    }
+
+
+}
+@media (max-width: 480px) {
+    #sectionTwo{
+        padding: 0 30px;
+        
+    
+    
+
+    }
+    .blackCard{
+        width: 200px;
+        height: 200px;
+        font-size: 23px;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ================================ */
+#sectioThree{
+
+        /* width: 100%; */
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        padding: 50px  200px;
+
+    
+    
+}
+
+.AboutCard{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.AboutCardContent{
+    width: 50%;
+}
+
+.Empty{
+    width: 50%;
+
+}
+
+
+.AboutCardContent h2{
+    font-size: 34px;
+    text-decoration: underline;
+}
+.AboutCardContent p{
+    font-size: 24px;
+}
+
+
+
+
+/* /==================== SECTION 4 */
+
+
+#ServicesSection{
+    height: 100px;
+    
+}
+
+#sectionFour{
+    width: 1100px ;
+    max-width: 1200px;
+    /* margin: 0 auto ; */
+    height: 30vh;
+    max-height: 700px;
+    padding: 100px 200px ;
+    position: relative;
+
+}
+
+
+
+.blackCard{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 43px;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+}
+
+
+.sectionFive{
+    padding:  0 200px;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+
+
+}
+.sectionFiveHeading{
+    font-size: 43px;
+    font-weight: bolder;
+}
+
+
+#sectionSix{
+
+    padding: 0 200px ;
+    max-width: 1200px;
+    background-color: black ;    
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+}
+.sectionSixContent{
+    width: 60%;
+    color: white;
+    font-size: 23px;
+}
+
+
+#sectionSeven{
+    padding:100px 200px 0 200px;
+    height: 40vh;
+    width: 1200px;
+}
+#sectionEight{
+    padding: 0 200px;
+    height: 100vh;
+    width: 1200px;
+    display: flex;    
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.FormContent{
+    width: 60%;
+    display: flex;    
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.FormContentHeading{
+    font-size: 60px;
+}
+.FormContentPara{
+    font-size: 18px;
+}
+#form{
+    display: flex;    
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+/* #form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    border: 2px solid black ;
+    width: 900px;
+
+
+} */
+#form input , #formTextArea{
+    width: 100%;
+    height: 50px;
+    border: 2px solid black ;
+    width: 900px;
+    padding: 10px;
+
+
+}
+#formTextArea{
+    height: 200px;
+    
+}
+#formSubmitButton{
+    
+width: 100px;
+height: 30px;
+background-color: black;
+color: white ;
+border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-left: 10px;
+}
+
+
+footer{
+    width: 100%;
+    height: 40vh;
+
+    padding: 100px 200px;
+
+    background-color: #F0F0F0 ;
+
+    display: flex;
+justify-content: start;
+align-items: start;
+
+flex-direction: column;
+gap: 20px;
+
+}
+.footerContent{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+}
+.footerContentLeft{
+    width: 50%;
+    display: flex;
+justify-content: center;
+align-items: center;
+
+flex-direction: column;
+gap: 20px;
+}
+.footerContentRight {
+    width: 50%;
+}
+.footerContentHeading{
+    font-size: 43px;
+}
+
+
+.footerLinks li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 50px;
+
+}
+.footerLinks li{
+    text-decoration: none;
+}
+    .footerLinks li a {
+    text-decoration: none;
+
+
+}
+
+.footerRightLinks{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 50px; 
+
+}

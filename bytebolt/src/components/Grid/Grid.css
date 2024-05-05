@@ -1,0 +1,68 @@
+/* Grid.css */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+}
+
+/* Card style with some responsiveness */
+.card {
+  border: 2px solid #ccc;
+  overflow: hidden;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 400px;
+  
+
+}
+
+.card-icon {
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+.card-body {
+  padding: 0px 50px;
+
+}
+
+.card h3 {
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+
+/* Responsive adjustments using media queries */
+@media (max-width: 600px) {
+  .card h3 {
+    font-size: 20px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 400px) {
+  .card h3 {
+    font-size: 18px;
+  }
+  
+  .card-icon {
+    padding: 15px 0;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+}
