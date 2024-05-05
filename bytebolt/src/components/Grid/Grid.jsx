@@ -5,10 +5,19 @@ const Card = ({ icon, title, description, paragragh }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
+    document.getElementById("homePage").style.backgroundColor = "black";
+    document.getElementById("Services").style.backgroundColor = "white";
+    document.getElementById("Services").style.color = "black";
+    
+    
     setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
+    document.getElementById("homePage").style.backgroundColor = "white";
+    document.getElementById("Services").style.backgroundColor = "black"; 
+    document.getElementById("Services").style.color = "white";
+
     setIsHovered(false);
   };
 

@@ -2,7 +2,11 @@
     scroll-behavior: smooth;
 }
 
-
+#homePage{
+    /* changed background using JS in Grid.jsx */
+    transition: background-color 0.6s ease;
+  }
+  
 
 #sectionOne {
     height: 50vh;

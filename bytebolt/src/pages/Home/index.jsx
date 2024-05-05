@@ -11,7 +11,7 @@ import Grid from "../../components/Grid/Grid";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
 const Home = () => {
   return (
-    <div>
+    <div id="homePage">
       <Navbar />
 
       <div style={{ height: "100px" }} id="homeSectionId"></div>
