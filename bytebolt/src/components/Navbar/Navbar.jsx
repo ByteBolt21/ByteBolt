@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="navbar" id="navbarId"   >
       <div className="container">
-        <div className="logo">
+        <div className="logo" style={{margin: "0 0 0 -10px"}}>
           <ByteBoltHorizontal />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
