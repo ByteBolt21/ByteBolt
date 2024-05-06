@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
             <li>
-              <a href="#homeSectionId">Home</a>
+              <a href="#homePage">Home</a>
             </li>
             <li>
               <a href="#AaboutUsSectionId">About</a>
