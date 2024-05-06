@@ -1,8 +1,15 @@
 /* Grid.css */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Card style with some responsiveness */
@@ -46,7 +53,34 @@
   margin-top: 0;
 }
 
+/* For screens with a maximum width of 900px (small screens) */
+@media (max-width: 1050px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sectionFive{
+    padding:0  20px;
 
+  }
+
+}
+
+/* For screens with a maximum width of 600px (mobile screens) */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sectionFive{
+    padding:0  20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+
+  
+}
 /* Responsive adjustments using media queries */
 @media (max-width: 600px) {
   .card h3 {

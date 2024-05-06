@@ -81,7 +81,7 @@ ul{
   background-color: #574c4c;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900) {
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
   }
@@ -106,6 +106,9 @@ ul{
 
   .nav-elements.active {
     width: 270px;
+    height: 100vh;
+    padding: 10%;
+
   }
 
   .nav-elements ul {
@@ -119,9 +122,11 @@ ul{
     margin-top: 22px;
 
     display: flex;
-    justify-self: end;
+    /* justify-self: end; */
+    justify-content: center;
     align-items: center;
-
+    text-align: center;
+    width: 100%;
     
   }
   .nav-elements ul li a{
@@ -130,5 +135,9 @@ ul{
   
 #ContactUsButton{
     margin-left: 0;
+    width: 100%;
+    display: flex;
+    
+
 }
 }
