@@ -3,16 +3,23 @@ import Navbar from "../../components/Navbar/Navbar";
 
 import "./Home.css";
 import Grid from "../../components/Grid/Grid";
-import Swal from "sweetalert2";
 
 // import "../Home/footerLogo.png"
 import ByteBoltHorizontal from "../../components/ByteBoltHorizontal/ByteBoltHorizontal";
 const Home = () => {
+  const [alertMessage, setAlertMessage] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
+
+  const showAlert = (message) => {
+    setAlertMessage(message);
+    setTimeout(() => {
+      setAlertMessage(null);
+    }, 3000); // Hide the alert after 3 seconds
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +39,7 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.result === "success") {
-          Swal.fire("Success", "Form submitted successfully", "success");
+          showAlert("Form submitted successfully");
           // Clear form inputs after successful submission
           setFormData({
             name: "",
@@ -40,21 +47,27 @@ const Home = () => {
             message: ""
           });
         } else {
-          Swal.fire("Error", "An error occurred while submitting the form", "error");
+          showAlert("An error occurred while submitting the form");
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        Swal.fire("Error", "An error occurred while submitting the form", "error");
+        showAlert("An error occurred while submitting the form");
       });
   };
+
 
   return (
     <div id="homePage">
       <Navbar />
 
 
-   
+   {/* Alert */}
+     {/* Alert */}
+     {alertMessage && (
+        <div className="alert">{alertMessage}</div>
+      )}
+
       {/* ====================  Section One ==================== */}
       <div className="wrapperForSectionOne">
         <section id="sectionOne">
