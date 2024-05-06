@@ -3,7 +3,8 @@ import Navbar from "../../components/Navbar/Navbar";
 
 import "./Home.css";
 import Grid from "../../components/Grid/Grid";
-import Swal from "sweetalert2";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 // import "../Home/footerLogo.png"
 import ByteBoltHorizontal from "../../components/ByteBoltHorizontal/ByteBoltHorizontal";
@@ -22,39 +23,42 @@ const Home = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+
+
+  const handleSubmit = async (e) => {
+
     e.preventDefault();
+
     const formDataToSend = new FormData(e.target);
-    fetch(e.target.action, {
-      method: "POST",
-      body: formDataToSend
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.result === "success") {
-          Swal.fire("Success", "Form submitted successfully", "success");
-          // Clear form inputs after successful submission
-          setFormData({
-            name: "",
-            email: "",
-            message: ""
-          });
-        } else {
-          Swal.fire("Error", "An error occurred while submitting the form", "error");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        Swal.fire("Error", "An error occurred while submitting the form", "error");
+    try {
+      const response = await fetch(e.target.action, {
+        method: "POST",
+        body: formDataToSend,
       });
+      const data = await response.json();
+      if (data.result === "success") {
+        toast.success("Form submitted successfully");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error("An error occurred while submitting the form");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("An error occurred while submitting the form");
+    }
   };
+
 
   return (
     <div id="homePage">
       <Navbar />
 
 
-   
+
       {/* ====================  Section One ==================== */}
       <div className="wrapperForSectionOne">
         <section id="sectionOne">
@@ -87,12 +91,12 @@ const Home = () => {
         <div id="AaboutUsSection"></div>
         <div id="AaboutUsSectionId"></div>
 
-      <div className="container">
-        <section id="sectionTwo">
-          <div id="AaboutUs" className="blackCard">
-            ABOUT US
-          </div>
-        </section>
+        <div className="container">
+          <section id="sectionTwo">
+            <div id="AaboutUs" className="blackCard">
+              ABOUT US
+            </div>
+          </section>
         </div>
         <div style={{ padding: "70px" }}></div>
         {/*==================== Section Three ABOUT CARDS==================== */}
@@ -189,12 +193,12 @@ const Home = () => {
 
       <div className="container">
 
-      <section id="sectionFour">
-        <div id="Services" className="blackCard">
-          Services
-        </div>
-      </section>
-        </div>
+        <section id="sectionFour">
+          <div id="Services" className="blackCard">
+            Services
+          </div>
+        </section>
+      </div>
 
       {/*==================== Section Five==================== */}
 
@@ -230,12 +234,12 @@ const Home = () => {
       <div id="ContactUsSectionId"></div>
       <div className="container">
 
-      <section id="sectionFour">
-        <div id="Services" className="blackCard" style={{ marginTop: "50px" }}>
-          Contact US
-        </div>
-      </section>
-        </div>
+        <section id="sectionFour">
+          <div id="Services" className="blackCard" style={{ marginTop: "50px" }}>
+            Contact US
+          </div>
+        </section>
+      </div>
 
       {/*==================== Section EIGHT==================== */}
 
@@ -252,34 +256,34 @@ const Home = () => {
             </h2>
           </div>
           <form
-        id="form"
-        action="https://script.google.com/macros/s/AKfycbyFiLSjKOvecOswTp8QiPbwAiu5MVHi3PK_9wpMP67xVageD6vLacm77FnGv-iCJ3A8/exec"
-        method="post"
-        onSubmit={handleSubmit}
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter Your Name"
-          value={formData.name}
-          onChange={handleInputChange}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Your email"
-          value={formData.email}
-          onChange={handleInputChange}
-        />
-        <textarea
-          id="formTextArea"
-          name="message"
-          placeholder="Enter your Message"
-          value={formData.message}
-          onChange={handleInputChange}
-        ></textarea>
-        <button id="formSubmitButton" type="submit">Submit</button>
-      </form>
+            id="form"
+            action="https://script.google.com/macros/s/AKfycbyFiLSjKOvecOswTp8QiPbwAiu5MVHi3PK_9wpMP67xVageD6vLacm77FnGv-iCJ3A8/exec"
+            method="post"
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Your email"
+              value={formData.email}
+              onChange={handleInputChange}
+            />
+            <textarea
+              id="formTextArea"
+              name="message"
+              placeholder="Enter your Message"
+              value={formData.message}
+              onChange={handleInputChange}
+            ></textarea>
+            <button id="formSubmitButton" type="submit">Submit</button>
+          </form>
         </section>
       </div>
 
