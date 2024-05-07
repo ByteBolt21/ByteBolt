@@ -15,6 +15,7 @@ const Home = () => {
     message: ""
   });
 
+  const [loading, setLoading] = useState(false);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -28,6 +29,7 @@ const Home = () => {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
+    setLoading(true); 
 
     const formDataToSend = new FormData(e.target);
     try {
@@ -49,6 +51,8 @@ const Home = () => {
     } catch (error) {
       console.error("Error:", error);
       toast.error("An error occurred while submitting the form");
+    }finally {
+      setLoading(false); // Set loading to false after form submission completes
     }
   };
 
@@ -282,7 +286,9 @@ const Home = () => {
               value={formData.message}
               onChange={handleInputChange}
             ></textarea>
-            <button id="formSubmitButton" type="submit">Submit</button>
+               <button id="formSubmitButton" type="submit" disabled={loading}>
+          {loading ? "Submitting..." : "Submit"}
+        </button>
           </form>
         </section>
       </div>
