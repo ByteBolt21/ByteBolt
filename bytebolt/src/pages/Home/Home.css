@@ -657,6 +657,25 @@
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: #2f234f;
+    ;
+    /* #2f234f; */
+}
+
+.siteleft li {
+    list-style: none;
+    padding-left: 350px;
+}
+
+.privacyPolicy {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {

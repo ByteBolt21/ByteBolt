@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-
 import "./Home.css";
 import Grid from "../../components/Grid/Grid";
 import { toast } from 'react-toastify';
@@ -29,7 +28,7 @@ const Home = () => {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    setLoading(true); 
+    setLoading(true);
 
     const formDataToSend = new FormData(e.target);
     try {
@@ -51,7 +50,7 @@ const Home = () => {
     } catch (error) {
       console.error("Error:", error);
       toast.error("An error occurred while submitting the form");
-    }finally {
+    } finally {
       setLoading(false); // Set loading to false after form submission completes
     }
   };
@@ -286,9 +285,9 @@ const Home = () => {
               value={formData.message}
               onChange={handleInputChange}
             ></textarea>
-               <button id="formSubmitButton" type="submit" disabled={loading}>
-          {loading ? "Submitting..." : "Submit"}
-        </button>
+            <button id="formSubmitButton" type="submit" disabled={loading}>
+              {loading ? "Submitting..." : "Submit"}
+            </button>
           </form>
         </section>
       </div>
@@ -364,8 +363,14 @@ const Home = () => {
               </ul>
             </div>
           </div>
-          <div className="siteRights">@2024 All rights Reserved</div>
+          <div className="privacyPolicy">
+
+            <div className="siteRights">@2024 All rights Reserved</div>
+            <div className="siteleft" > <li><a href="/privacy-policy">Privacy Policy</a></li></div>
+          </div>
         </div>
+
+
       </div>
     </div>
   );
